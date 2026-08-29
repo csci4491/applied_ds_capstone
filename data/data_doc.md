@@ -1,0 +1,1 @@
+Store data here with the exception of really large stuff. For that, consider using Google Drive (your university account grants you a substantial amount of storage). I suggest keeping the directory structure of this consistent with the directory structure you use on Google Drive.
