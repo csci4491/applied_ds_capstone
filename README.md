@@ -4,4 +4,4 @@ Our overarching question for the course is this: Given all of the scientific art
 
 
 ## Members
-- Pearploy Chaicharoensin
+- Pearploy Chaicharoensin (Mira)
