@@ -9,7 +9,7 @@ Our overarching question for the course is this: Given all of the scientific art
 
 - Python 3.11.5.
 
-Create/activate a env:
+Create/activate env:
 
 ```bash
 python3.11 -m venv .venv
