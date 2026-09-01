@@ -4,6 +4,7 @@ Our overarching question for the course is this: Given all of the scientific art
 
 ## Members
 - Pearploy Chaicharoensin
+- Tano-bian Guy Adoni
 
 ## Project Setup
 
