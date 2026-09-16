@@ -2,7 +2,7 @@
 
 ## Description
 
-	This project will study how scientific collaboration has changed across arXiv fields over time. Are researchers collaborating with people from different research areas more than they used to? We will look at whether research teams are becoming larger and whether researchers are increasingly working with people from different research areas. Using author information, paper categories, titles, abstracts, and document embeddings.
+This project will study how scientific collaboration has changed across arXiv fields over time. Are researchers collaborating with people from different research areas more than they used to? We will look at whether research teams are becoming larger and whether researchers are increasingly working with people from different research areas. Using author information, paper categories, titles, abstracts, and document embeddings.
 	
 ## Main Research Question
 
@@ -19,7 +19,7 @@ Steps :
 - Count the number of authors on each paper.
 - Group papers by year and field 
 - Plot the results over time (mean/median number of authors)
-- Compare earlier and later years to answer : Did team size increase?, Which fields changed the most?, Which fields stayed relatively stable?
+- Compare earlier and later years to answer (Did team size increase?, Which fields changed the most?, Which fields stayed relatively stable?)
 
 
 ### 2. Has the amount of cross-field collaboration increased over time?
