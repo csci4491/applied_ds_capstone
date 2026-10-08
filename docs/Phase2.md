@@ -20,7 +20,7 @@ Find whether papers are being written by larger teams than they used to be.
 - Created mean/median team-size plots
 
 ### Results
-- Use 2.9 million arXiv papers from 1992 to 2026
+- Use 1,669,891 arXiv papers from 1992 to 2026
 - Average team size increased from about 2.2 to 6.3 authors per paper
 
 ### What Is Going Well
