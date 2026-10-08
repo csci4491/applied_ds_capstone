@@ -20,7 +20,49 @@ Steps :
 
 ### 2. Has the amount of cross-field collaboration increased over time?
 
-See if researchers increasingly work with people whose research backgrounds are different from their own.
+See if research increasingly connects different arXiv fields over time.
+
+### What I Have Done
+
+- Loaded the cleaned arXiv metadata dataset
+- Used paper categories to identify broad research fields
+- Defined a paper as cross-field when its categories represent more than one broad research field
+- Calculated the percentage of cross-field papers by year
+- Compared cross-field trends across the six largest arXiv fields
+- Removed field-year groups with fewer than 100 papers before interpreting the trends
+- Created graphs showing overall and field-specific cross-field trends
+
+### Results
+
+- Cross-field research does not show a steady increase over time
+- Cross-field activity reached about 36.9% in 2020 and decreased to about 26.5% in 2025
+- Different fields show different trends
+- `hep-ph` shows one of the highest cross-field rates among the large fields analyzed
+- `math` and `cond-mat` show more gradual changes
+- `cs` increased during some periods but declined in recent years
+
+### What Is Going Well
+
+- The category-based method is feasible with the current dataset
+- It allows us to compare long-term trends across fields
+- The results show clear differences between research fields
+- Filtering small field-year groups makes the comparisons more reliable
+
+### Problems or Challenges
+
+- Some early field-year groups contain very few papers and can produce misleading percentages
+- We use arXiv category cross-listings as a proxy for cross-field research
+- A cross-listed paper does not necessarily prove that the individual authors have different research backgrounds
+- We still need to refine how broad fields are defined
+- The original embedding approach overlaps with Subquestion 3 and would require more computation
+
+### Plan Before Next Check-In (Phase 3 Analyze)
+
+- Refine and justify the broad-field definitions
+- Compare earlier and later periods to measure which fields changed the most
+- Investigate which fields are driving the increases and decreases in cross-field research
+- Test whether the conclusions remain similar under different field-grouping choices
+- Decide whether the category-based approach is sufficient or whether an embedding-based extension adds useful information
 
 Steps :
 
