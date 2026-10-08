@@ -1,4 +1,4 @@
-# Project Proposal (Phase 2)
+# Project Proposal (Phase 2 explore the data)
 	
 ## Main Research Question
 
@@ -10,40 +10,42 @@ How has collaboration in scientific research changed across arXiv fields over ti
 
 Find whether papers are being written by larger teams than they used to be.
 
-Steps :
+### What I Have Done
 
-- Count the number of authors on each paper.
-- Group papers by year and field 
-- Plot the results over time (mean/median number of authors)
-- Compare earlier and later years to answer (Did team size increase?, Which fields changed the most?, Which fields stayed relatively stable?)
+- Cleaned the arXiv metadata dataset
+- Kept the main fields (paper ID, year, category, title, abstract, authors)
+- Remove rows with missing main field values
+- Count authors per paper
+- Grouped papers by year and broad field ( ex: cs.AI, cs.LG -> cs )
+- Created mean/median team-size plots
 
+### Results
+- Use 2.9 million arXiv papers from 1992 to 2026
+- Average team size increased from about 2.2 to 6.3 authors per paper
+
+### What Is Going Well
+- The dataset is large enough to show long-term trends
+- The cleaning process works well
+- 1st subquestion has a clear direction
+- Mean and median help show the effect of very large teams
+
+### Problems or Challenges
+- Some fields, especially physics, have very large collaborations that raise the average
+- The 2026 data is incomplete
+- The next questions are more complex
+
+### Plan Before Next Check-In (Phase 3 analyze)
+- Check team-size trends by field
+- Decide how to handle 2026
 
 ### 2. Has the amount of cross-field collaboration increased over time?
 
 See if researchers increasingly work with people whose research backgrounds are different from their own.
 
-Steps :
-
-- Take each paper's title + abstract
-- Convert the text into numbers representing the paper's topic (embedding) to find similar papers
-- Look at the author's previous papers to find their research area.
-- Compare the embeddings of the authors' previous research.
-- For papers with multiple authors, calculate the average research difference between the authors.
-- Group that measurement by year.
-- Plot the results over time 
-
-
 ### 3. Are researchers increasingly collaborating with authors whose research interests are different from their own?
 
 Author Research-Topic Distance
 
-Steps :
 
-- Get each author's previous papers.
-- Use the title and abstract of those papers.
-- Create embeddings for the papers. (like 2nd sub question)
-- Create a research profile for each author by combining the embeddings of that author's previous papers.
-- Compare the two authors' profiles using cosine similarity/distance
-- For a paper with several authors, calculate the average difference between the authors.
-- Group the results by year.
-- Compare the trend across fields.
+
+
