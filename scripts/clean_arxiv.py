@@ -40,6 +40,7 @@ IMPORTANT_COLUMNS = ["paper_id", "title", "abstract", "submitted_year", "categor
 PAPERS_PER_GROUP = 1_000
 SAMPLE_GROUP_COLUMNS = ["submitted_year", "primary_category"]
 RANDOM_SEED = 42
+EXCLUDED_SUBMITTED_YEARS = {"2026"}
 
 
 def clean_text(value) -> str:
@@ -217,7 +218,9 @@ def clean_metadata(
         "clean_records": 0,
         "dropped_duplicates": 0,
         "dropped_missing_important_values": 0,
+        "dropped_excluded_years": 0,
         "dropped_by_group_cap": 0,
+        "excluded_submitted_years": sorted(EXCLUDED_SUBMITTED_YEARS),
         "papers_per_group": papers_per_group,
         "sampling_group_columns": SAMPLE_GROUP_COLUMNS,
         "random_seed": random_seed,
@@ -238,6 +241,10 @@ def clean_metadata(
         missing_values = required_values.isna() | required_values.eq("")
         clean_chunk = clean_chunk[~missing_values.any(axis=1)]
         summary["dropped_missing_important_values"] += before_missing_drop - len(clean_chunk)
+
+        before_year_drop = len(clean_chunk)
+        clean_chunk = clean_chunk[~clean_chunk["submitted_year"].isin(EXCLUDED_SUBMITTED_YEARS)]
+        summary["dropped_excluded_years"] += before_year_drop - len(clean_chunk)
 
         before_duplicate_drop = len(clean_chunk)
         clean_chunk = clean_chunk.drop_duplicates(subset="paper_id", keep="first")
@@ -316,6 +323,7 @@ def clean_file_is_current(
             and summary.get("papers_per_group") == papers_per_group
             and summary.get("sampling_group_columns") == SAMPLE_GROUP_COLUMNS
             and summary.get("random_seed") == random_seed
+            and summary.get("excluded_submitted_years") == sorted(EXCLUDED_SUBMITTED_YEARS)
             and summary.get("important_columns") == IMPORTANT_COLUMNS
             and summary.get("kept_columns") == KEEP_COLUMNS
             and summary.get("clean_file_bytes") == clean_file.stat().st_size

@@ -9,3 +9,6 @@ scipy
 requests
 tqdm
 python-dotenv
+sentence-transformers
+hdbscan
+scikit-learn
