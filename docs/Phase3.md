@@ -46,6 +46,14 @@ How has collaboration in scientific research changed across arXiv fields over ti
 - Trends varied across fields.
 - Category cross-listings describe the fields covered by a paper. Measuring individual authors’ backgrounds would require additional analysis.
 
+### Phase 3 Analysis
+
+- Sample papers from several major arXiv fields.
+- Use titles and abstracts to create SBERT document embeddings.
+- Use chunking for texts that exceed the model input length and average the chunk embeddings.
+- Cluster the paper embeddings to identify semantic research groups.
+- Compare the embedding-based clusters with the official arXiv broad-field labels.
+- Use the results to evaluate whether the category-based definition of cross-field research should be refined.
 
 ## 3. Are researchers increasingly collaborating with authors whose research interests differ from their own?
 
