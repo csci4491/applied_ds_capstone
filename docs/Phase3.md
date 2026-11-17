@@ -57,7 +57,29 @@ How has collaboration in scientific research changed across arXiv fields over ti
 
 ## 3. Are researchers increasingly collaborating with authors whose research interests differ from their own?
 
-### Current Status
+### What I Have Done
 
-- Set up the notebook and data-loading steps.
-- The coauthor topic-distance analysis and results are pending.
+- Studied how researchers from different fields collaborate on arXiv papers.
+
+- Used information about authors, publication years, and research categories.
+
+- Created Python code to compare authors' previous research fields.
+
+- Used previous publications to estimate each author's research interests.
+
+- Prepared graphs to study how cross-field collaboration changes over time.
+
+- Focused on fields such as computer science, mathematics, statistics, and physics.
+
+
+### Findings and Evidence
+
+- My analysis code is prepared, but I have not yet calculated the final percentages because of the dataset download problem.
+
+- Previous research provides evidence that collaboration between different research fields has increased in some settings.
+
+- Luke et al. (2015) found that disciplinary isolation in research collaboration networks decreased by approximately 49%–61% between 2007 and 2010 at the institution they studied.
+
+- This suggests that researchers in that setting were becoming more connected across different    disciplines.
+
+- However, I still need to test whether the same pattern appears in our arXiv dataset.
